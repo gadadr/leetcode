@@ -1,8 +1,10 @@
 package oj_1_20;
 
+import common.ListNode;
+
 public class LinkedList {
 	
-	private static Node head;
+	private static ListNode head;
 	
 	public static void main(String[] args) {		
 		addNode(1);addNode(2);addNode(3);addNode(4);addNode(5);addNode(6);
@@ -13,10 +15,10 @@ public class LinkedList {
 	
 	private static void addNode(int x) {
 		if (head == null) {
-			head = new Node(x);
+			head = new ListNode(x);
 			return;
 		}
-		Node node = new Node(x);
+		ListNode node = new ListNode(x);
 		node.next = head;
 		head = node;
 	}
@@ -26,7 +28,7 @@ public class LinkedList {
 	}
 	
 	private static void print() {
-		Node current = head;
+		ListNode current = head;
 		while (current != null) {
 			System.out.println(current.val);
 			current = current.next;
@@ -34,18 +36,18 @@ public class LinkedList {
 		System.out.println("\n");
 	}
 	
-	private static void printReverse(Node current) {
+	private static void printReverse(ListNode current) {
 		if (current.next != null) {
 			printReverse(current.next);
 		}
 		System.out.println(current.val);
 	}
 	
-	private static Node reverse(Node current) {
+	private static ListNode reverse(ListNode current) {
 		if (current == null) {
 			return null;
 		}
-		Node tempHead = current, prev = current;
+		ListNode tempHead = current, prev = current;
 		current = current.next;
 		while (current != null) {
 			prev.next = current.next;
@@ -57,11 +59,11 @@ public class LinkedList {
 		return tempHead;
 	}
 	
-	private static Node reverse(Node current, int k) {
+	private static ListNode reverse(ListNode current, int k) {
 		if (current == null) {
 			return null;
 		}
-		Node tempHead = current, prev = current;
+		ListNode tempHead = current, prev = current;
 		current = current.next;
 		while (current != null) {
 			prev.next = current.next;
