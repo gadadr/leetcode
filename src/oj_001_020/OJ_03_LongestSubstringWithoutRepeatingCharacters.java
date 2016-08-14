@@ -1,4 +1,4 @@
-package oj_1_20;
+package oj_001_020;
 
 public class OJ_03_LongestSubstringWithoutRepeatingCharacters {
 	

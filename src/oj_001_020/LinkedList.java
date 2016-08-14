@@ -1,4 +1,4 @@
-package oj_1_20;
+package oj_001_020;
 
 import common.ListNode;
 
