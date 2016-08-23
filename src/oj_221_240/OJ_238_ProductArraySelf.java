@@ -9,57 +9,24 @@ public class OJ_238_ProductArraySelf {
 	}
 	
 	public int[] productExceptSelf(int[] nums) {
-        int ans[] = new int[nums.length];
-        int prod = 1;
-        int zeroes = 0;
-        for (int i=0; i<nums.length; i++) {
-            if (nums[i] != 0) {
-                prod *= nums[i];
-            } else {
-                zeroes++;
-                if (zeroes>1) {
-                    return ans;
-                }
-            }
-        }
-      
-        if (zeroes == 1) {
-            for (int i=0; i<nums.length; i++) {
-                if (nums[i] == 0) {
-                    ans[i] = prod;
-                    return ans;
-                }
-            }
-        }
-        
-        for (int i=0; i<nums.length; i++) {
-            ans[i] = nums[i] == 1 ? prod : product(prod, nums[i]);
-        }
-        return ans;
-    }
-    
-    private int product(int div, int sor) {
-        int quo = 1;
-        int temp = sor;
-        boolean keepMultiplying = true;
-        while (true) {
-            temp = sor*quo;
-            if (Math.abs(temp) < Math.abs(div) && keepMultiplying) {
-            	quo*=2;
-            } else if (Math.abs(temp) < Math.abs(div) && !keepMultiplying) {
-            	quo++;
-            } else if (Math.abs(temp) > Math.abs(div)) {
-            	quo/=2;
-            	temp/=2;
-            	keepMultiplying = false;
-            } else {
-            	break;
-            }
-        }
-        if ((div<0 && sor<0) || (div>0 && sor>0)) {
-            return quo;
-        } else {
-            return -quo;
-        }
-    }
+		int[] t1 = new int[nums.length];
+		int[] t2 = new int[nums.length];
+		
+		t1[0] = 1;
+		t2[nums.length-1] = 1;
+		
+		for (int i=0; i<nums.length-1; i++) {
+			t1[i+1] = t1[i] * nums[i];
+		}
+		
+		for (int i=nums.length-1; i>0; i--) {
+			t2[i-1] = t2[i] * nums[i];
+		}
+		
+		int[] ans = new int[nums.length];
+		for (int i=nums.length-1; i>=0; i--) {
+			ans[i] = t1[i] * t2[i];
+		}
+		return ans;
+	}
 }
