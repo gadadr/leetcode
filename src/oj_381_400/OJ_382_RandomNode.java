@@ -9,34 +9,24 @@ import common.ListNode;
  */
 public class OJ_382_RandomNode {
 
-	private int count;
-
-	private ListNode node;
-
+	private ListNode head;
 	private Random random;
 
 	public OJ_382_RandomNode(ListNode head) {
-		int count = 0;
-		ListNode cur = head;
-		while (cur != null) {
-			cur = cur.next;
-			count++;
-		}
-		this.node = head;
-		this.count = count;
+		this.head = head;
 		this.random = new Random();
 	}
 
 	/** Returns a random node's value. */
 	public int getRandom() {
-		int x = random.nextInt();
-		x %= count;
-
-		ListNode cur = node;
-		while (x > 0 && cur.next != null) {
+		ListNode cur = head, ans = null;
+		
+		for (int i=1; cur != null; i++) {
+			if (random.nextInt(i) == 0) {
+				ans = cur;
+			}
 			cur = cur.next;
-			x--;
 		}
-		return cur == null ? 0 : cur.val;
+		return ans.val;
 	}
 }
