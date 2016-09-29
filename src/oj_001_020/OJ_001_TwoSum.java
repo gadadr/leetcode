@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class OJ_01_TwoSum {
+public class OJ_001_TwoSum {
 	
 	public int[] twoSum(final int[] nums, int target) {
 	       
