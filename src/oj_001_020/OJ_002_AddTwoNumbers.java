@@ -2,7 +2,7 @@ package oj_001_020;
 
 import common.ListNode;
 
-public class OJ_02_AddTwoNumbers {
+public class OJ_002_AddTwoNumbers {
 	
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
        if (l1 == null) {

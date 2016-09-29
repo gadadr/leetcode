@@ -1,6 +1,6 @@
 package oj_001_020;
 
-public class OJ_03_LongestSubstringWithoutRepeatingCharacters {
+public class OJ_003_LongestSubstringWithoutRepeatingCharacters {
 	
 	public int lengthOfLongestSubstring(String s) {
 	      
