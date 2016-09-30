@@ -1,13 +1,6 @@
 package oj_221_240;
 
 public class OJ_238_ProductArraySelf {
-	
-	public static void main(String[] args) {
-		OJ_238_ProductArraySelf self = new OJ_238_ProductArraySelf();
-		int[] ans = self.productExceptSelf(new int[]{2,4,-2,1,2,-1,4,1,3,-3,-1,2,1,2,1,-3,1,-1,1,3,3,-2,-2,3,-3,-1,1,-2,-4,-2});
-		System.out.println();
-	}
-	
 	public int[] productExceptSelf(int[] nums) {
 		int[] t1 = new int[nums.length];
 		int[] t2 = new int[nums.length];
