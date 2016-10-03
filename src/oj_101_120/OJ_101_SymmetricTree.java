@@ -10,7 +10,7 @@ public class OJ_101_SymmetricTree {
 		if (root == null) {
 			return true;
 		}
-		List<TreeNode> list = new ArrayList();
+		List<TreeNode> list = new ArrayList<>();
 		list.add(root);
 		while (!list.isEmpty()) {
 			int size = list.size();
