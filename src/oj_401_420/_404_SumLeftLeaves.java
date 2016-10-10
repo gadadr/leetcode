@@ -2,7 +2,7 @@ package oj_401_420;
 
 import common.TreeNode;
 
-public class OJ_404_SumLeftLeaves {
+public class _404_SumLeftLeaves {
 	int count = 0;
     public int sumOfLeftLeaves(TreeNode root) {
         if (root != null) {
