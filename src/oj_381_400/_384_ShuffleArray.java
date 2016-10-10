@@ -1,9 +1,9 @@
 package oj_381_400;
 
-public class OJ_384_ShuffleArray {
+public class _384_ShuffleArray {
 	static int i=0;
     private int[] nums;
-    public OJ_384_ShuffleArray(int[] nums) {
+    public _384_ShuffleArray(int[] nums) {
         this.nums = nums;
     }
     

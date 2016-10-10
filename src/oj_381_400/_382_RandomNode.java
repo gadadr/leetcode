@@ -7,12 +7,12 @@ import common.ListNode;
 /**
  * This only passed 4/7 test cases. Not sure what leetcode expects since it says random.
  */
-public class OJ_382_RandomNode {
+public class _382_RandomNode {
 
 	private ListNode head;
 	private Random random;
 
-	public OJ_382_RandomNode(ListNode head) {
+	public _382_RandomNode(ListNode head) {
 		this.head = head;
 		this.random = new Random();
 	}

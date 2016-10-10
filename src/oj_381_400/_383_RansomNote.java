@@ -3,7 +3,7 @@ package oj_381_400;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OJ_383_RansomNote {
+public class _383_RansomNote {
 	
 	public boolean canConstruct(String ransomNote, String magazine) {
 		char[] mag = magazine.toCharArray();

@@ -3,7 +3,7 @@ package oj_381_400;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class OJ_387_FirstUniqueCharacter {
+public class _387_FirstUniqueCharacter {
 	public int firstUniqChar(String s) {
         int ans = -1;
         if (s != null) {
