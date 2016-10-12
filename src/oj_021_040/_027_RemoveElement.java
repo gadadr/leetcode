@@ -1,6 +1,6 @@
 package oj_021_040;
 
-public class OJ_027_RemoveElement {
+public class _027_RemoveElement {
 	public int removeElement(int[] nums, int val) {
 		int j = nums.length;
 		for (int i=0 ; i<j; i++) {
