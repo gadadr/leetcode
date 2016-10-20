@@ -1,6 +1,6 @@
 package oj_361_380;
 
-public class OJ_371_SumTwoIntegers {
+public class _371_SumTwoIntegers {
 
 	public int getSum(int a, int b) {
 		while (b != 0) {
