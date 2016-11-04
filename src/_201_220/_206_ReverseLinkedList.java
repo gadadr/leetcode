@@ -2,7 +2,7 @@ package _201_220;
 
 import common.ListNode;
 
-public class OJ_206_ReverseLinkedList {
+public class _206_ReverseLinkedList {
 	public ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;
